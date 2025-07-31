@@ -147,7 +147,7 @@ header[data-nav]{
 .brand{ display:flex; align-items:center; gap:14px; }
 
 /* NOTE: inline style height:46px ko hata dein ya yahan !important use karen */
-.brand img{ height:52px !important; display:block; }   /* bigger logo */
+.brand img{ height:100px !important; display:block; }   /* bigger logo */
 .brand > span{
   font-size:1.35rem;                             /* bigger company name */
   font-weight:700;
@@ -1626,6 +1626,51 @@ html.nav-open .nav-toggle{ color:#fff; } /* bars use currentColor */
     right: min(78vw, 360px); /* <- same width as your drawer */
     opacity: 1; visibility: visible; pointer-events: auto;
   }
+}
+/* Brand layout */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Logo bigger */
+.brand img {
+  height: 60px; /* increase this value if needed */
+  width: auto;
+}
+
+/* Text below each other */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Name */
+.brand-name {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* Tagline under the name */
+.brand-tagline {
+  font-size: 12px;
+  color: #000;  /* black */
+  margin-top: 2px;
+}
+
+/* Hide hero badges */
+.hero .badges {
+  display: none;
+}
+/* Reduce space between logo and brand text */
+.brand {
+  gap: 0px; /* pehle 12px tha; aap 6–10px try kar sakte ho */
+}
+
+/* Optional: even tighter on mobile */
+@media (max-width: 640px) {
+  .brand { gap: 6px; }
 }
 
 
